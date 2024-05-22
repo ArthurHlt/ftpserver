@@ -18,6 +18,7 @@ At the current stage, supported backend are:
 - [Google Drive](https://developers.google.com/drive) (see [doc](https://github.com/fclairamb/ftpserver/tree/master/fs/gdrive)) through [afero-gdrive](https://github.com/fclairamb/afero-gdrive)
 - [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) through [afero's sftpfs](https://github.com/spf13/afero/)
 - Email through [go-mail](https://github.com/go-mail/mail) thanks to [@x-way](https://github.com/x-way)
+- Webdav through [gowebdav](https://github.com/studio-b12/gowebdav)
 
 And with those are supported common parameters to switch them to read-only, enable login access, or use a temporary directory file (see [doc](https://github.com/fclairamb/ftpserver/tree/master/fs)).
 

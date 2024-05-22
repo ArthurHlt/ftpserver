@@ -3,6 +3,7 @@ package fs
 
 import (
 	"fmt"
+	"github.com/fclairamb/ftpserver/fs/webdav"
 
 	snd "github.com/fclairamb/afero-snd"
 	log "github.com/fclairamb/go-log"
@@ -45,6 +46,8 @@ func LoadFs(access *confpar.Access, logger log.Logger) (afero.Fs, error) {
 		fs, err = gdrive.LoadFs(access, logger.With("component", "gdrive"))
 	case "dropbox":
 		fs, err = dropbox.LoadFs(access)
+	case "webdav":
+		fs, err = webdav.LoadFs(access, logger.With("component", "webdav"))
 	default:
 		fs, err = nil, &UnsupportedFsError{Type: access.Fs}
 	}
